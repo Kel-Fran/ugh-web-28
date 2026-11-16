@@ -1,0 +1,7 @@
+{ "shoes": [
+    {"id": 0, "name": "shoe A", "release": "2026-11-16T09:20:28.145Z", "inStock": true},
+    {"id": 1, "name": "shoe B", "release": "2026-11-16T09:20:28.145Z", "inStock": false},
+    {"id": 2, "name": "shoe C", "release": "2026-11-16T09:20:28.145Z", "inStock": true},
+    {"id": 3, "name": "shoe D", "release": "2026-11-16T09:20:28.145Z", "inStock": true},
+    {"id": 4, "name": "shoe E", "release": "2026-11-16T09:20:28.145Z", "inStock": false}
+] }
