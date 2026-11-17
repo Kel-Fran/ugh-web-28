@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 interface Shoe {
   id: number;
   name: string;
-  relesae: string;
+  release: string;
   inStock: boolean;
 }
 export default function App() {
@@ -11,7 +11,7 @@ export default function App() {
   useEffect(() => {
     let ignore = false;
     (async () => {
-      const data = await (await fetch('localhost:3000/shoes')).json() as Shoe[];
+      const data = await (await fetch('http://localhost:3000/shoes')).json() as Shoe[];
       if (!ignore) setShoes(data);
     })();
     return () => void (ignore = true);
@@ -32,7 +32,7 @@ export default function App() {
             {shoes.map(it => (
               <tr key={it.id}>
                 <td>{it.name}</td>
-                <td>{it.relesae}</td>
+                    <td>{new Date(it.release).toLocaleDateString()}</td>
                 <td>{it.inStock ? "Yes" : "No"}</td>
               </tr>
             ))}
