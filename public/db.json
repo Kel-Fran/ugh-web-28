@@ -1,7 +1,47 @@
-{ "shoes": [
-    {"id": 0, "name": "shoe A", "release": "2026-11-16T09:20:28.145Z", "inStock": true},
-    {"id": 1, "name": "shoe B", "release": "2026-11-16T09:20:28.145Z", "inStock": false},
-    {"id": 2, "name": "shoe C", "release": "2026-11-16T09:20:28.145Z", "inStock": true},
-    {"id": 3, "name": "shoe D", "release": "2026-11-16T09:20:28.145Z", "inStock": true},
-    {"id": 4, "name": "shoe E", "release": "2026-11-16T09:20:28.145Z", "inStock": false}
-] }
+{
+  "shoes": [
+    {
+      "id": "0",
+      "name": "shoe A",
+      "release": "2026-11-16T09:20:28.145Z",
+      "inStock": true
+    },
+    {
+      "id": "1",
+      "name": "shoe B",
+      "release": "2026-11-16T09:20:28.145Z",
+      "inStock": false
+    },
+    {
+      "id": "2",
+      "name": "shoe C",
+      "release": "2026-11-16T09:20:28.145Z",
+      "inStock": true
+    },
+    {
+      "id": "3",
+      "name": "shoe D",
+      "release": "2026-11-16T09:20:28.145Z",
+      "inStock": true
+    },
+    {
+      "id": "4",
+      "name": "shoe E",
+      "release": "2026-11-16T09:20:28.145Z",
+      "inStock": false
+    },
+    {
+      "name": "asd",
+      "release": "2026-11-17T00:00:00.000Z",
+      "inStock": false,
+      "id": "hAJosu29wu0"
+    },
+    {
+      "name": "wewrw",
+      "release": "2026-11-01T00:00:00.000Z",
+      "inStock": true,
+      "id": "LiAhC4jasNw"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

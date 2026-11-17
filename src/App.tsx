@@ -42,7 +42,37 @@ export default function App() {
     </div>
     <div className="row">
       <div className="col">
-        <form></form>
+        <form onSubmit={e => {
+            e.preventDefault();
+            const data = new FormData(e.target);
+            const name = data.get('name')!.toString();
+            const release = new Date(data.get('release')).toISOString();
+            const inStock = data.get('inStock') === 'on';
+            fetch('http://localhost:3000/shoes', {
+                method: 'POST',
+                body: JSON.stringify({name, release, inStock})
+            }).then(async _ => {
+                e.target.reset();
+                const data = await (await fetch('http://localhost:3000/shoes')).json() as Shoe[];
+                setShoes(data);
+            })
+        }}>
+            <div className="mb-3">
+                <label htmlFor="name" className="form-label">name</label>
+                <input type="text" name="name" className="form-control"/>
+            </div>
+            <div className="mb-3">
+                <label htmlFor="release" className="form-label">release</label>
+                <input type="date" name="release" className="form-control"/>
+            </div>
+            <div className="mb-3">
+                <label htmlFor="inStock" className="form-label">in stock</label>
+                <input type="checkbox" name="inStock" className="check"/>
+            </div>
+            <div className="mb-3">
+                <input type="submit"/>
+            </div>
+        </form>
       </div>
     </div>
   </div>
